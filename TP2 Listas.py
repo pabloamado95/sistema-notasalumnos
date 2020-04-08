@@ -21,7 +21,7 @@ def cambiar_Nota_Est1():
     btn = Button (ventanaIngresar,text = 'AGREGAR',relief = 'raised',bg = 'lightskyblue',bd = 3,height = 1, width = 28,command = lambda : [agregar()])
     btn.grid (column = 0, row = 2)
     def agregar():
-        while getdouble(Entry_1.get()) >= 0 and getdouble(Entry_1.get()) <= 5:
+        if getdouble(Entry_1.get()) >= 0 and getdouble(Entry_1.get()) <= 5:
             notas_Alumnos.pop(0)
             nva_Nota = getdouble(Entry_1.get())
             notas_Alumnos.insert(0,nva_Nota)
